@@ -16,11 +16,11 @@ namespace TechnicalTask.Tests.Controllers
         {
             //Setup
 
-            Orders orders = new Orders();
+           
 
             //Act
 
-            var totalCost = orders.OrderList.Select(x => x.Unit.TotalCost).ToList();
+            var totalCost = Orders.OrderList.SelectMany(x => x.Unit.Select(u => u)).ToList();
             
             //Assert
            

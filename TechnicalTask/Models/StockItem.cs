@@ -7,6 +7,7 @@ namespace TechnicalTask.Models
 {
     public class StockItem
     {
+        public string UnitName { get; set; }
         public decimal UnitPrice { get; set; }
         public decimal Cost { get; set; }
         public int Quantity { get; set; }

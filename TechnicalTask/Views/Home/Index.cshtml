@@ -1,5 +1,5 @@
 ﻿
-@model List<TechnicalTask.Models.CustomerOrder>
+@model TechnicalTask.Models.CustomerOrder
 
 @{
     ViewBag.Title = "Stock control";
@@ -8,9 +8,54 @@
 
 <h2>Stock control</h2>
 
-@foreach (var order in @Model)
+
+@using (Html.BeginForm("Index", "Home"))
 {
-    <p>@order.CustomerName</p>
-    <p>@order.OrderId</p>
-    <p>@order.Unit.TotalCost</p>
+    <div>
+        customer name @Html.TextBoxFor(model => model.CustomerName)
+    </div>
+    for (var i = 0; i < @Model.Unit.Count(); i++)
+    {
+@*        <p>@Model.Unit[i].UnitName</p> 
+        <p>@Model.Unit[i].UnitPrice</p>
+        <p>@Model.Unit[i].Quantity</p>
+        <p>@Model.Unit[i].TotalCost</p>
+        <p>@Model.Unit[i].Cost</p>*@
+        @Html.DisplayTextFor(model => model.Unit[i].UnitPrice)
+        <br/>
+        @Html.DisplayTextFor(model => model.Unit[i].UnitName)
+        <br />
+        @Html.DisplayTextFor(model => model.Unit[i].TotalCost)
+        <br />
+        @Html.DisplayTextFor(model => model.Unit[i].Cost)
+        <br/>
+        @Html.HiddenFor(model => model.Unit[i].UnitPrice)
+        @Html.HiddenFor(model => model.Unit[i].UnitName)
+        @Html.HiddenFor(model => model.Unit[i].TotalCost)
+        @Html.HiddenFor(model => model.Unit[i].Cost)
+
+        <div>
+            Quantity @Html.TextBoxFor(model => model.Unit[i].Quantity)
+        </div>
+        
+    }
+
+    <div>
+        Submit button <input type="submit" />
+    </div>
+}
+
+
+@if (@Model.OrderId != null)
+{
+    <p>@Model.CustomerName</p>
+    <p>@Model.OrderId</p>
+    foreach (var unit in @Model.Unit)
+    {
+        <p>@unit.UnitName</p>
+        <p>@unit.UnitPrice</p>
+        <p>@unit.Quantity</p>
+        <p>@unit.TotalCost</p>
+        <p>@unit.Cost</p>
+    }
 }
