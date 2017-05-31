@@ -1,4 +1,6 @@
 ﻿using System.Web.Mvc;
+using TechnicalTask.MockDataService;
+using TechnicalTask.Models;
 
 namespace TechnicalTask.Controllers
 {
@@ -7,7 +9,10 @@ namespace TechnicalTask.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            return View();
+            Orders customerOrder = new Orders();
+            var orders = customerOrder.OrderList;
+
+            return View(orders);
         }
     }
 }

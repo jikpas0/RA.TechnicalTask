@@ -25,6 +25,7 @@ C:\Users\Admin\Desktop\TechnicalDeveloperTask\TechnicalTask\TechnicalTask\bin\Mi
 C:\Users\Admin\Desktop\TechnicalDeveloperTask\TechnicalTask\TechnicalTask\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Admin\Desktop\TechnicalDeveloperTask\TechnicalTask\TechnicalTask\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Admin\Desktop\TechnicalDeveloperTask\TechnicalTask\TechnicalTask\bin\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\TechnicalDeveloperTask\TechnicalTask\TechnicalTask\bin\nunit.framework.dll
 C:\Users\Admin\Desktop\TechnicalDeveloperTask\TechnicalTask\TechnicalTask\bin\System.Web.Helpers.dll
 C:\Users\Admin\Desktop\TechnicalDeveloperTask\TechnicalTask\TechnicalTask\bin\System.Web.Mvc.dll
 C:\Users\Admin\Desktop\TechnicalDeveloperTask\TechnicalTask\TechnicalTask\bin\System.Web.Optimization.dll
@@ -41,6 +42,7 @@ C:\Users\Admin\Desktop\TechnicalDeveloperTask\TechnicalTask\TechnicalTask\bin\Mi
 C:\Users\Admin\Desktop\TechnicalDeveloperTask\TechnicalTask\TechnicalTask\bin\Microsoft.ApplicationInsights.xml
 C:\Users\Admin\Desktop\TechnicalDeveloperTask\TechnicalTask\TechnicalTask\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Admin\Desktop\TechnicalDeveloperTask\TechnicalTask\TechnicalTask\bin\Newtonsoft.Json.xml
+C:\Users\Admin\Desktop\TechnicalDeveloperTask\TechnicalTask\TechnicalTask\bin\nunit.framework.xml
 C:\Users\Admin\Desktop\TechnicalDeveloperTask\TechnicalTask\TechnicalTask\bin\System.Web.Optimization.xml
 C:\Users\Admin\Desktop\TechnicalDeveloperTask\TechnicalTask\TechnicalTask\bin\System.Web.Razor.xml
 C:\Users\Admin\Desktop\TechnicalDeveloperTask\TechnicalTask\TechnicalTask\bin\System.Web.Webpages.xml

@@ -1,8 +1,16 @@
 ﻿
+@model List<TechnicalTask.Models.CustomerOrder>
+
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Stock control";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Stock control</h2>
 
+@foreach (var order in @Model)
+{
+    <p>@order.CustomerName</p>
+    <p>@order.OrderId</p>
+    <p>@order.Unit.TotalCost</p>
+}
