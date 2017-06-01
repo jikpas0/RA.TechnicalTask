@@ -11,6 +11,7 @@ namespace TechnicalTask.Models
         public decimal UnitPrice { get; set; }
         public decimal Cost { get; set; }
         public int Quantity { get; set; }
+        public bool Ordered { get; set; }
         public decimal TotalCost {
 	        get { return CalculateDiscount(); }
         }

@@ -19,6 +19,7 @@ namespace TechnicalTask.MockDataService
                         OrderId = 1,
                         CustomerName = "joe bloggs",
                         OrderDate = DateTime.Now,
+                        OrderComplete = false,
                         Unit = new List<StockItem>
                         {
                             new StockItem { 

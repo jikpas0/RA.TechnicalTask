@@ -18,26 +18,30 @@ namespace TechnicalTask.MockDataService
                     {
                         UnitName = "Item 1",
                         Cost = 10,
-                        Quantity = 2,
-                        UnitPrice = 1
+                        Quantity = 1,
+                        UnitPrice = 1,
+                        Ordered = false
                     }, new StockItem
                     {
                         UnitName = "Item 2",
                         Cost = 12,
-                        Quantity = 15,
-                        UnitPrice = 1
+                        Quantity = 1,
+                        UnitPrice = 1,
+                        Ordered = false
                     }, new StockItem
                     {
                         UnitName = "Item 3",
                         Cost = 13,
-                        Quantity = 25,
-                        UnitPrice = 1
+                        Quantity = 1,
+                        UnitPrice = 1,
+                        Ordered = false
                     }, new StockItem
                     {
                         UnitName = "Item 4",
                         Cost = 15,
-                        Quantity = 40,
-                        UnitPrice = 1
+                        Quantity = 1,
+                        UnitPrice = 1,
+                        Ordered = false
                     }
                 };
             }

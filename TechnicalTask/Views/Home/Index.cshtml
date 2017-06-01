@@ -5,57 +5,129 @@
     ViewBag.Title = "Stock control";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<script type="text/javascript">
 
-<h2>Stock control</h2>
+</script>
 
-
-@using (Html.BeginForm("Index", "Home"))
-{
-    <div>
-        customer name @Html.TextBoxFor(model => model.CustomerName)
-    </div>
-    for (var i = 0; i < @Model.Unit.Count(); i++)
+<div class="container">
+    <h1>Stock Control</h1>
+</div>
+<br />
+<div class="container">
+    @using (Html.BeginForm("Index", "Home"))
     {
-@*        <p>@Model.Unit[i].UnitName</p> 
-        <p>@Model.Unit[i].UnitPrice</p>
-        <p>@Model.Unit[i].Quantity</p>
-        <p>@Model.Unit[i].TotalCost</p>
-        <p>@Model.Unit[i].Cost</p>*@
-        @Html.DisplayTextFor(model => model.Unit[i].UnitPrice)
-        <br/>
-        @Html.DisplayTextFor(model => model.Unit[i].UnitName)
-        <br />
-        @Html.DisplayTextFor(model => model.Unit[i].TotalCost)
-        <br />
-        @Html.DisplayTextFor(model => model.Unit[i].Cost)
-        <br/>
-        @Html.HiddenFor(model => model.Unit[i].UnitPrice)
-        @Html.HiddenFor(model => model.Unit[i].UnitName)
-        @Html.HiddenFor(model => model.Unit[i].TotalCost)
-        @Html.HiddenFor(model => model.Unit[i].Cost)
-
-        <div>
-            Quantity @Html.TextBoxFor(model => model.Unit[i].Quantity)
+        <div class="container">
+            Customer name: @Html.TextBoxFor(model => model.CustomerName)
         </div>
-        
+        <br/>
+        for (var i = 0; i < @Model.Unit.Count(); i++)
+        {
+            <div class="form-group">
+                
+                    <div class="row">
+                        <div class="col-md-3">
+                            Name
+                        </div>
+                        <div class="col-md-3">
+                            @Html.DisplayTextFor(model => model.Unit[i].UnitName)
+                            @Html.HiddenFor(model => model.Unit[i].UnitName)
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Price
+                        </div>
+                        <div class="col-md-3">
+                            @Html.DisplayTextFor(model => model.Unit[i].UnitPrice)
+                            @Html.HiddenFor(model => model.Unit[i].UnitPrice)
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Total Cost
+                        </div>
+                        <div class="col-md-3">
+                            @Html.DisplayTextFor(model => model.Unit[i].TotalCost)
+                            @Html.HiddenFor(model => model.Unit[i].TotalCost)
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Cost
+                        </div>
+                        <div class="col-md-3">
+                            @Html.DisplayTextFor(model => model.Unit[i].Cost)
+                            @Html.HiddenFor(model => model.Unit[i].Cost)
+                        </div>
+                    </div>
+                    <br/>
+                    <hr/>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Quantity
+                        </div>
+                        <div class="col-md-3">
+                            @Html.TextBoxFor(model => model.Unit[i].Quantity)
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Add
+                        </div>
+                        <div class="col-md-3">
+                            @Html.CheckBoxFor(model => model.Unit[i].Ordered)
+                        </div>
+                    </div>
+                    <br/>
+                    <br/>
+                    <hr/>
+                
+            </div>
+        }
+
+        <div class="container">
+            Submit: <input type="submit" Text="Purchase"/>
+        </div>
     }
+ </div>
+<br/>
+<br />
+<hr/>
 
-    <div>
-        Submit button <input type="submit" />
-    </div>
-}
-
+ 
+<div class="container">
+    <h1>Orders</h1>
+</div>
 
 @if (@Model.OrderId != null)
 {
-    <p>@Model.CustomerName</p>
-    <p>@Model.OrderId</p>
+    <div class="container"><strong>Customer Name: </strong>@Model.CustomerName</div>
+    <div class="container"><strong>Order Id: </strong>@Model.OrderId</div>
+
+    <br/>
+    <hr/>
+
     foreach (var unit in @Model.Unit)
     {
-        <p>@unit.UnitName</p>
-        <p>@unit.UnitPrice</p>
-        <p>@unit.Quantity</p>
-        <p>@unit.TotalCost</p>
-        <p>@unit.Cost</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Unit Price</th>
+                    <th>Quantity</th>
+                    <th>Total Cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@unit.UnitPrice</td>
+                    <td>@unit.Quantity</td>
+                    <td>@unit.TotalCost</td>
+                </tr>
+            </tbody>
+        </table>
     }
 }
