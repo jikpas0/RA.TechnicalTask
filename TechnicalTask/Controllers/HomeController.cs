@@ -10,7 +10,8 @@ namespace TechnicalTask.Controllers
         public ActionResult Index(CustomerOrder customerOrder = null)
         {
             //Checks to ensure nothing has been ordered by this customer, would have been better to split out the ordered items from the available items in the CustomerOrder model
-            if (string.IsNullOrEmpty(customerOrder?.CustomerName) && customerOrder.OrderId == null) 
+            if (customerOrder == null || 
+                (string.IsNullOrEmpty(customerOrder?.CustomerName) && customerOrder.OrderId == null)) 
             {
                 customerOrder = new CustomerOrder();
                 customerOrder.Unit = Stock.OrderList;

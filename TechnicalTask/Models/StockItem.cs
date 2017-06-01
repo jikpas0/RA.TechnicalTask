@@ -9,7 +9,6 @@ namespace TechnicalTask.Models
     {
         public string UnitName { get; set; }
         public decimal UnitPrice { get; set; }
-        public decimal Cost { get; set; }
         public int Quantity { get; set; }
         public bool Ordered { get; set; }
         public decimal TotalCost {
@@ -18,7 +17,7 @@ namespace TechnicalTask.Models
 
         public decimal CalculateDiscount()
         {
-            var totalCost = UnitPrice * Cost;
+            var totalCost = UnitPrice * Quantity;
 
             if (Quantity > 10 && Quantity < 20)
             {

@@ -177,7 +177,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="MockDataService\Interfaces\" />
     <Folder Include="Models\ViewModels\" />
   </ItemGroup>
   <PropertyGroup>
