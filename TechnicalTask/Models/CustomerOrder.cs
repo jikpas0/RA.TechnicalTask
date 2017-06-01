@@ -11,6 +11,5 @@ namespace TechnicalTask.Models
         public DateTime OrderDate { get; set; }
         public string CustomerName { get; set; }
         public List<StockItem> Unit { get; set; }
-        public bool OrderComplete { get; set; }
     }
 }
